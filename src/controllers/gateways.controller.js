@@ -68,7 +68,7 @@ export const createGateways = async (req, res) => {
       [serialNumber, humanName, ip]
     );
 
-    res.send({ id: rows.insertId, serialNumber, humanName, ip });
+    res.send({ idGateway: rows.insertId, serialNumber, humanName, ip });
   } catch (error) {
     return res.status(500).json({
       message: "Connection Error",
